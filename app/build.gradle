@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Vers.compile_sdk
+    defaultConfig {
+        applicationId "com.github.satoshun.example.coroutineexample"
+        minSdkVersion Vers.min_sdk
+        targetSdkVersion Vers.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation Libs.kotlin
+
+    implementation Libs.appcompat
+    implementation Libs.constraintlayout
+
+    implementation Libs.coroutine
+    implementation Libs.ui_coroutine
+
+    implementation Libs.retrofit
+    implementation Libs.retrofit_coroutine_adapter
+    implementation Libs.gson_converter
+
+    testImplementation 'junit:junit:4.12'
+
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+}
