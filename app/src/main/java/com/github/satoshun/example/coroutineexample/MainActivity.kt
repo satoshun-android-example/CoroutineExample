@@ -10,7 +10,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
-
 class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -25,26 +24,15 @@ class MainActivity : AppCompatActivity() {
         .build()
 
     val rrr = retrofit.create(RRR::class.java)
-    rrr.get()
-
-    val rrr2 = retrofit.create(RRR2::class.java)
-    launch { rrr2.get() }
+    launch {
+      rrr.get().await()
+    }
   }
 }
 
 interface RRR {
   @GET("/data/2.5/weather")
   fun get(): Deferred<Resp>
-}
-
-
-interface RRR2 {
-  @GET("/data/2.5/weather")
-  fun _get(): Deferred<Resp>
-
-  suspend fun get(): Resp {
-    return _get().await()
-  }
 }
 
 class Resp
