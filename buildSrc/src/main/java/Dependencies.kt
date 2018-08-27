@@ -1,15 +1,15 @@
 object Vers {
   val compile_sdk = 28
-  val min_sdk = 25
+  val min_sdk = 26
   val target_sdk = 28
 
   val kotlin = "1.2.61"
-  val couroutine = "0.24.0"
+  val couroutine = "0.25.0"
   val ktlint = "0.24.0"
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.1.4"
+  val android_plugin = "com.android.tools.build:gradle:3.2.0-rc02"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
