@@ -9,7 +9,7 @@ object Vers {
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0-rc02"
+  val android_plugin = "com.android.tools.build:gradle:3.3.0-alpha08"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
@@ -17,6 +17,7 @@ object Libs {
 
   val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Vers.kotlin}"
   val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vers.couroutine}"
+  val rx_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:${Vers.couroutine}"
   val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
   val ktx = "androidx.core:core-ktx:1.0.0-rc01"
